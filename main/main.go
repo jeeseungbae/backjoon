@@ -45,7 +45,6 @@ func stacking(block []bool, upBlock []bool, basicBlock []int, start int, w int, 
 			for j := 0; j < len(basicBlock); j++ {
 				if i+basicBlock[j] <= w && block[i+basicBlock[j]-1] {
 					*answer += 1
-
 					blockBuild(upBlock, true, i, i+basicBlock[j])
 
 					//	위로 쌓기
